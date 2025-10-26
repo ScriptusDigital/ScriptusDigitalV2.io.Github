@@ -6,11 +6,23 @@
   <title>GUITARCADE</title>
   <link href="GuitarArcade.css" rel="stylesheet">
 
-  <audio id="bg-music" autoplay loop>
+<audio id="bg-music" autoplay loop muted>
   <source src="VanHale.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
 </audio>
 
+<script>
+  const music = document.getElementById('bg-music');
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      music.muted = false; // fade-in trick
+      music.volume = 0;
+      const fade = setInterval(() => {
+        if (music.volume < 1) music.volume += 0.05;
+        else clearInterval(fade);
+      }, 200);
+    }, 2000);
+  });
+</script>
 </head>
 
 <body>
@@ -144,10 +156,10 @@
         <div class="column right">
           <h3>FOLLOW US ON SOCIAL MEDIA</h3>
           <div class="social-links">
-            <a href="#"><img src="Tube.png" alt="YouTube"><span>YouTube</span></a>
-            <a href="#"><img src="insta.png" alt="Facebook"><span>Facebook</span></a>
-            <a href="#"><img src="Twitter.png" alt="Twitter"><span>X (Twitter)</span></a>
-            <a href="#"><img src="Patreon.png" alt="Patreon"><span>Patreon</span></a>
+            <a href="#"><img src="Tube.jpg" alt="YouTube"><span>YouTube</span></a>
+            <a href="#"><img src="insta.jpg" alt="Instagram"><span>Instragram</span></a>
+            <a href="#"><img src="Twitter.jpg" alt="Twitter"><span>X (Twitter)</span></a>
+            <a href="#"><img src="Patreon.jpg" alt="Patreon"><span>Patreon</span></a>
           </div>
         </div>
       </div>
