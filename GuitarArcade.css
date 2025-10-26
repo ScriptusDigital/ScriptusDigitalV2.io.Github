@@ -103,7 +103,7 @@ header {
 h1 {
   position: relative;
   font-family: 'Russo One', sans-serif;
-    font-size: clamp(0.5rem, 8vw, 8rem);
+  font-size: clamp(0.5rem, 8vw, 8rem);
   line-height: 1.05;
   text-transform: uppercase;
   color: #ffea00;
@@ -112,29 +112,28 @@ h1 {
   word-wrap: break-word;
   letter-spacing: 6px;
   text-shadow:
-
-
     6px 6px 0 #cc0000,
-    8px 8px 0 #660000;
-  animation: titlePulse 4s ease-in-out infinite;
-
+    8px 8px 0 #660000,
+    0 0 30px rgba(255,80,0,0.4),
+    0 0 60px rgba(255,0,0,0.2);
+  animation: titlePulse 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(255,200,0,0.4));
 }
 
-/* Main Title Animation */
 @keyframes titlePulse {
-  20%, 100% {
+  0%, 100% {
     text-shadow:
       6px 6px 0 #cc0000,
       8px 8px 0 #660000,
-      0 0 30px rgba(255,80,0,0.5),
-      0 0 60px rgba(255,0,0,0.3);
+      0 0 30px rgba(255,100,0,0.4),
+      0 0 60px rgba(255,0,0,0.25);
   }
   50% {
     text-shadow:
       6px 6px 0 #ff3300,
       8px 8px 0 #990000,
-      0 0 50px rgba(255,180,0,0.8),
-      0 0 80px rgba(255,60,0,0.6);
+      0 0 55px rgba(255,180,0,0.75),
+      0 0 90px rgba(255,60,0,0.6);
   }
 }
 
