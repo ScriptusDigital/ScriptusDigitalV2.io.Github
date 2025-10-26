@@ -1,51 +1,163 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Restaurant</title>
-  <link href="Food.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUITARCADE</title>
+  <link href="GuitarArcade.css" rel="stylesheet">
+
+  <audio id="bg-music" autoplay loop>
+  <source src="VanHale.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 </head>
 
-<body> 
+<body>
+  <div id="insert-coin-screen">
+  <div class="insert-text">INSERT COIN</div>
+</div>
+  <div class="crt">
     <header>
-  <h1>GOOD IRISH FOOD</h1>
-    <nav>
-      <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="directions.html">Directions</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  </nav>
-  </header>
- 
-  <P>
-  <blockquote>THE BEST IN IRISH FOOD</blockquote>
-  </P>
-  <h2>BREAKFAST MENU</h2>
-  <div id="wrapper">
+      <h1>GUITARCADE</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lessons.html">Lessons</a></li>
+          <li><a href="index.html">Interviews</a></li>
+          <li><a href="mailto:Scriptumdigital.ie@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <ol type="1">
-      <li>Full Irish - £10
-      </li>
-      <li>Porridge - £5
-      </li>
-      <li>Cereal - £2.50
-      </li>
-      <li>Pancakes £150
-      </li>
+    <blockquote class="tagline">BACK TO THE FRETURE</blockquote>
+
+    <div class="container">
+      <!-- LEFT COLUMN -->
+      <div class="column left">
+        <h3>NEW ARTICLES</h3>
+        <ul class="article-list">
+          <li>
+            <a href="#">
+              <span class="article-title">Best Perm, 1984: The Untold Story of Studio Static</span>
+              <p class="article-blurb">How one hairdryer changed rock forever — and possibly melted a few amps along the way.</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="article-title">The Music’s Not Too Fast — Your Ears Are Too Slow</span>
+              <p class="article-blurb">A spirited defence of speed metal as the most honest cardio workout of the 20th century.</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="article-title">MIDI: Man’s First Step Toward Becoming a Synth</span>
+              <p class="article-blurb">In 1983, humanity connected its soul to a five-pin cable. It still hasn’t unplugged.</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="article-title">Power Ballads That Could Power a Small Town</span>
+              <p class="article-blurb">An emotional deep dive into the songs that ran on heartbreak, hairspray, and 240 volts.</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="article-title">When Tapping Was a Religion and Eddie Was the Pope</span>
+              <p class="article-blurb">Every note was a prayer, every whammy bar a confession. A brief history of divine shredding.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- MAIN COLUMN -->
+      <div class="column main">
+        <blockquote>“Where tone meets time travel.”</blockquote>
+
+        <p>
+          Check out the latest gear at 
+          <a href="https://www.guitarworld.com" target="_blank">Guitar World</a>.
+        </p>
+
+        <p>
+          Welcome to <strong>GUITARCADE</strong> — where tone meets time travel. 
+          We’re giving you the keys to the Lamborghini of sound and sending you 
+          hurtling back to an era when guitars ruled the world, hairspray was flammable, 
+          and solos lasted longer than most relationships.
+        </p>
+
+        <p>
+          From neon-lit stages to smoky studio sessions, this site celebrates the 
+          unholy marriage of voltage and virtuosity. Think <em>Eddie Van Halen</em> 
+          meets <em>Tron</em>, with a side order of <em>Def Leppard</em> drama. 
+          Whether you’re here to learn, laugh, or melt a few faces, plug in and power up — 
+          because at <strong>GUITARCADE</strong>, the only limit is your sustain.
+        </p>
+
+      <div class="video-container">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/qLOIXPVcFlc"
+    title="Keys to the lambourghini"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+        <p>
+          Explore our lessons to unlock the secrets of shred, or dive into our 
+          articles for the latest riffs, gear gossip, and philosophical musings 
+          on why the ’80s were louder, prouder, and unapologetically awesome.
+        </p>
+      </div>
+
+      <!-- RIGHT COLUMN WRAPPER -->
+      <div class="right-wrapper">
+        <!-- GEAR FIRST -->
+        <div class="gear-container">
+          <h3>FEATURED GEAR</h3>
+          <ul class="article-list">
+            <li>
+              <a href="#">
+                <span class="article-title">Ibanez Timecaster ’85</span>
+                <p class="article-blurb">A mythical prototype said to bend both notes and spacetime.</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="article-title">Cry-Baby Flux Capacitor Wah</span>
+                <p class="article-blurb">Because some tones are worth 1.21 gigawatts.</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="article-title">Marshall Hoverstack 8000</span>
+                <p class="article-blurb">Defies gravity and noise complaints with equal ease.</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- THEN SOCIALS -->
+        <div class="column right">
+          <h3>FOLLOW US ON SOCIAL MEDIA</h3>
+          <div class="social-links">
+            <a href="#"><img src="Tube.png" alt="YouTube"><span>YouTube</span></a>
+            <a href="#"><img src="insta.png" alt="Facebook"><span>Facebook</span></a>
+            <a href="#"><img src="Twitter.png" alt="Twitter"><span>X (Twitter)</span></a>
+            <a href="#"><img src="Patreon.png" alt="Patreon"><span>Patreon</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Guitarcade. All Rights Reserved. | 
+        <a href="mailto:Scriptumdigital.ie@gmail.com">Email Us</a>
+      </p>
+    </footer>
   </div>
-  </ol>
-  <hr>
-
-  
-
 </body>
-<footer>
-  <p>
-    Website built in Visual Studio
-  </p>
-
-</footer>
-
 </html>

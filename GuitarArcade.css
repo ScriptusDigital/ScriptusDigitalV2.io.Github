@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Orbitron:wght@500;700&family=Audiowide&family=Monoton&display=swap');
+
+/* =========================================================
+   GLOBAL STYLES & ARCADE FRAME
+========================================================= */
+/* INSERT COIN INTRO */
+#insert-coin-screen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 3s ease 3s forwards;
+}
+
+.insert-text {
+  font-family: 'Russo One', sans-serif;
+  color: #ffea00;
+  font-size: 4rem;
+  text-shadow: 0 0 10px #ffea00, 0 0 25px red;
+  animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.2; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Orbitron', sans-serif;
+  color: #f2f2f2;  background-color: #000;
+  box-sizing: border-box;
+  background-image: url('Background5.jpg');
+  background-position: center center; 
+   background-size: 100% 100%;
+
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* GAMING BORDER */
+body {
+  border: 10px solid #ff3030;
+  border-radius: 40px;
+
+}
+
+html {
+  background: radial-gradient(circle at center, #200 0%, #000 100%);
+}
+
+p a {
+  color: #ffea4d;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(255, 255, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+p a:hover {
+  color: #000;
+  background-color: #ffea00;
+  padding: 2px 5px;
+  border-radius: 4px;
+  text-shadow: none;
+}
+
+/* =========================================================
+   HEADER & MARQUEE
+========================================================= */
+
+header {
+  text-align: center;
+  position: relative;
+  background-image: url('Guitarcore9.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-bottom: 4px solid #ff3030;
+  padding: 50px 0 30px;
+  margin-top: -10px;
+  border-top: none;  /
+  box-shadow: inset 0 10px 30px rgba(0,0,0,0.6); 
+}
+
+/* =========================================================
+   MAIN TITLE 
+========================================================= */
+
+h1 {
+  position: relative;
+  font-family: 'Russo One', sans-serif;
+    font-size: clamp(0.5rem, 8vw, 8rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #ffea00;
+  margin: -25px auto 0;
+  text-align: center;
+  word-wrap: break-word;
+  letter-spacing: 6px;
+  text-shadow:
+    0 0 15px rgba(255,255,100,0.7),
+    0 0 35px rgba(255,100,0,0.6),
+    6px 6px 0 #cc0000,
+    8px 8px 0 #660000;
+  animation: titlePulse 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255,200,0,0.3));
+}
+
+/* Main Title Animation */
+@keyframes titlePulse {
+  20%, 100% {
+    text-shadow:
+      6px 6px 0 #cc0000,
+      8px 8px 0 #660000,
+      0 0 30px rgba(255,80,0,0.5),
+      0 0 60px rgba(255,0,0,0.3);
+  }
+  50% {
+    text-shadow:
+      6px 6px 0 #ff3300,
+      8px 8px 0 #990000,
+      0 0 50px rgba(255,180,0,0.8),
+      0 0 80px rgba(255,60,0,0.6);
+  }
+}
+
+h3 {
+  font-family: 'Russo One', sans-serif;
+  color: #36b3ff;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin: 5px 0 12px;
+  line-height: 1.2;
+  text-shadow: 0 0 6px rgba(0,180,255,0.4), 0 0 10px rgba(0,100,255,0.2);
+}
+
+
+
+/* =========================================================
+   NAVIGATION MENU
+========================================================= */
+
+nav {
+  margin-top: 35px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+nav li {
+  text-align: center;
+}
+
+nav a {
+  font-family: 'Russo One', sans-serif;
+  text-decoration: none;
+  color: #ffea4d;
+  background: rgba(40, 0, 0, 0.85);
+  border: 2px solid #ff3030;
+  border-radius: 10px;
+  padding: clamp(10px, 1vw, 14px) clamp(10px, 2vw, 28px);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  background: #ffea00;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,0,0.5);
+}
+
+/* =========================================================
+   TAGLINE / BLOCKQUOTE
+========================================================= */
+
+blockquote {
+  font-family: 'Audiowide', sans-serif;
+  text-align: center;
+  color: #36b3ff;
+  font-size: 1.6em;
+  letter-spacing: 3px;
+  kerning: 0-10pxpx;;
+  border-top: 1px solid rgba(13,141,233,0.9);
+  border-bottom: 1px solid rgba(13,141,233,0.9);
+  padding: 10px;
+  margin: 15px 10%;
+  line-height: 0.9; 
+  text-shadow: 0 0 8px rgba(0,150,255,0.5);
+}
+
+/* =========================================================
+   FLEX LAYOUT
+========================================================= */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px auto 30px;
+  gap: 15px;
+}
+
+.column {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,50,50,0.3);
+  border-radius: 10px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.left, .right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.main {padding-top: 5px;
+  flex: 3;
+  min-width: 300px;
+}
+
+h3 {
+  text-align: center;
+  color: #36b3ff;
+  text-shadow: 0 0 6px rgba(0,180,255,0.4);
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.column ul li {
+  background: rgba(255,255,255,0.05);
+  color: #ffea4d;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 1px solid rgba(255,200,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.column ul li:hover {
+  background: #ff3030;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   RIGHT COLUMN: SOCIAL + GEAR
+========================================================= */
+
+/* Wrapper for stacking social and gear boxes */
+.right-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 220px;
+  gap: 20px;
+
+}
+
+/* Social section box styling */
+.column.right {
+  padding: 20px 15px
+  padding-top:5px
+
+border: 1px solid rgba(255,50,50,0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,0,0,0.15);
+}
+
+/* Keep social media images & labels exactly as before */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-links a {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid rgba(255,30,30,0.5);
+  box-shadow: 0 0 10px rgba(255,30,30,0.3);
+  transition: all 0.3s ease;
+}
+
+.social-links span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -50%);
+  font-family: 'Russo One', sans-serif;
+  font-size: 1em;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0,0,0,0.9);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.social-links a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255,120,0,0.6);
+}
+
+/* Featured Gear box below socials */
+.gear-container {
+  padding-top: 5px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,50,50,0.3);
+  border-radius: 10px;
+  text-align: center;
+ padding: 10px 14px 14px; 
+}
+
+.gear-container h3 {
+  color: #36b3ff;
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px rgba(0,180,255,0.4);
+  margin-bottom: 10px;
+   white-space: nowrap;
+}
+
+.gear-container .article-list li {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,200,0,0.2);
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: px;
+  transition: all 0.3s ease;
+}
+
+.gear-container .article-list li:hover {
+  background: #ff3030;
+  color: #fff;
+padding:14px;
+  transform: scale(1.03);
+}
+
+.gear-container .article-title {
+  color: #ffea4d;
+  text-shadow: 0 0 6px rgba(255,255,0,0.3);
+  font-size: 0.9em;
+  
+}
+
+.gear-container .article-blurb {
+  color: #c8c8c8;
+  font-size: 0.8em;
+  
+  margin: 0;
+}
+/* =========================================================
+   VIDEO CONTAINER
+========================================================= */
+
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  border: 2px solid rgba(255, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 80, 0, 0.3);
+  overflow: hidden;
+}
+
+.video-container::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+footer {
+  text-align: center;
+  color: #ffea4d;
+  font-size: 0.8em;
+  padding: 20px;
+  background: radial-gradient(circle at center, #1a0000 0%, #000 90%);
+  border-top: 2px solid #ff3030;
+  text-shadow: 0 0 5px rgba(255,0,0,0.4);
+  word-wrap: break-word;          
+  
+  white-space: normal;          
+  line-height: 1.4;
+  display: flex;                 
+  flex-direction: column;        
+  align-items: center;            
+  justify-content: center;       
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+           
+}
+
+footer a {
+  color: #ffea4d;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  word-break: break-word;         
+}
+
+
+
+/* =========================================================
+   RESPONSIVE DESIGN ELEMENTS
+========================================================= */
+
+
+
+@media (max-width: 400px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 0.95em;
+    padding: 10px 20px;
+  }
+
+
+}
+
+@media (max-width: 500px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  nav li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    padding: 12px 0;
+    margin: 4px 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+}
+
+
+/* ARTICLES FONTS AND THINGS */
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-list li {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,50,50,0.3);
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px 14px;
+  transition: all 0.3s ease;
+}
+
+.article-list li:hover {
+  background: #ff3030;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.article-list a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.article-title {
+  font-family: 'Russo One', sans-serif;
+  display: block;
+  color: #ffea4d;
+  font-size: 0.95em; 
+  margin-bottom: 4px;
+  text-shadow: 0 0 6px rgba(255,255,0,0.3);
+}
+
+.article-blurb {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8em; 
+  color: #c8c8c8;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+@media (max-width: 600px) {
+  .article-title { font-size: 0.9em; }
+  .article-blurb { font-size: 0.75em; }
+}
+
+/* =========================================================
+   TABLE STYLING (Lessons Page)
+========================================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9em;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffea4d;
+  border: 1px solid rgba(255, 50, 50, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 50, 50, 0.3);
+  text-align: left;
+}
+
+th {
+  background: rgba(255, 48, 48, 0.2);
+  color: #ffea00;
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+tr:hover {
+  background: rgba(255, 0, 0, 0.15);
+  transition: background 0.2s ease;
+}
+
